@@ -102,6 +102,7 @@ int menu(){
         fflush(stdin);
         if(scanf("%d", &t) != 1){
             printf("Opcao invalida! Tente novamente.");
+            t -= 1;
         }
 
         system("cls");
@@ -191,7 +192,7 @@ void prensado(){
         printf("%5sCachorros Quentes\n", " ");
         printf("%10sSabores:\n\n", " ");
 
-        for(int i = 1; i<MAX_OPTIONS_PR; i++) printf("[%d] %s\n", i, prensado_opcoes[i-1].nome);
+        for(int i = 1; i<=MAX_OPTIONS_PR; i++) printf("[%d] %s\n", i, prensado_opcoes[i-1].nome);
 
         printf("Escolha o sabor [0 para voltar]: ");
 
